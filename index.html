@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Twelfth Night (heads or tails)</title>
+        <link rel="stylesheet" href="stylesheet.css"/>
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="Twelfth Night (heads or tails) Cast Generator" />
+<meta property="og:description"   content="Who's playing who? Flip the coin to find out!" />
+    </head>
+    <body>
+        <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v9.0" nonce="pe4jEb3Q"></script>
+        <header>
+            <h1>Cast Generator</h1>
+            <p id="instructions">Click the coin to flip!</p>
+        </header>
+        <div id="introduction" class="highlight">
+                <p id="question">Who will play<br/><span class="role" id="firstRole"></span> and <span class="role" id="secondRole"></span>?</p>
+            <div id="flipDiv">
+                <img id="firstActor"/>             
+                <div id="flip">
+                    <img id="coin" src="Images/CoinBlank.png" id="rotate" onclick="flipCoin()" alt="Clip art coin"/>
+                </div>
+                <img id="secondActor"/>          
+            </div>
+        </div>
+            <div id="fullCast">
+                <h2>Cast</h2>
+                <p>(in order of appearance)</p>
+                <div id="characters">
+                    <div class="character" id="viola">
+                        <p>Viola</p>
+                        <p class="role"></p>
+                    </div>
+                    <div class="character" id="captain">
+                        <p>Sea Captain & Priest</p>
+                        <p class="role"></p>
+                    </div>
+                    <div class="character" id="orsino">
+                        <p>Orsino</p>
+                        <p class="role"></p>
+                    </div>
+                    <div class="character" id="valentine">
+                        <p>Valentine</p>
+                        <p class="role"></p>
+                    </div>
+                    <div class="character" id="toby">
+                        <p>Sir Toby</p>
+                        <p class="role"></p>
+                    </div>
+                    <div class="character" id="maria">
+                        <p>Maria</p>
+                        <p class="role"></p>
+                    </div>
+                    <div class="character" id="andrew">
+                        <p>Sir Andrew</p>
+                        <p class="role"></p>
+                    </div>
+                    <div class="character" id="feste">
+                        <p>Feste</p>
+                        <p class="role"></p>
+                    </div>
+                    <div class="character" id="olivia">
+                        <p>Olivia</p>
+                        <p class="role"></p>
+                    </div>
+                    <div class="character" id="malvolio">
+                        <p>Malvolio</p>
+                        <p class="role"></p>
+                    </div>
+                    <div class="character" id="antonio">
+                        <p>Antonio</p>
+                        <p class="role"></p>
+                    </div>
+                    <div class="character" id="sebastian">
+                        <p>Sebastian</p>
+                        <p class="role"></p>
+                    </div>
+                </div>
+                <h2>Twelfth Night (heads or tails)</h2>
+                <h2>6 - 23 January</h2>
+            </div>
+            <div id="download" class="hidden">
+                <button onclick="getCast()">Download image</button>
+            </div>
+        <footer>
+            <p><a class="link" href="https://aunewtheatre.sales.ticketsearch.com/sales/salesevent/3812">Get tickets</a> to the real thing. <a class="link" href="https://www.virginiaplaintheatre.com/current-shows">More info.</a></p>
+           <p>
+               Share the generator: <span class="fb-share-button" data-href="http://twelfthnight.thirtyfivesquare.com/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ftwelfthnight.thirtyfivesquare.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></span> <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Heads or tails?" data-url="http://twelfthnight.thirtyfivesquare.com/" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+           </p>
+            <p>Twelfth Night (heads or tails) is presented by Virginia Plain in association with New Theatre. Cast Generator created by Tabitha Woo. We acknowledge the Gadigal people of the Eora Nation, the Traditional Custodians of the land upon which this webpage was developed, and pay our respects to their Elders past, present and emerging.</p>
+        </footer>
+        <script src="script.js"></script>
+        <script src="html2canvas.min.js"></script>
+        <script>
+function getCast(){
+                html2canvas(document.querySelector("#fullCast"), {allowTaint: true, scrollX: 0, scrollY: -window.scrollY}).then(canvas => {
+                    var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");   
+                    var a = document.createElement("a");
+                    a.href = image;
+                    a.download = "twelfthnightcast.png";
+                    a.click();
+            });
+        }
+        </script>
+    </body>
+</html>

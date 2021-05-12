@@ -1,0 +1,138 @@
+body {
+  background-color: #fec85e;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  text-align: center;
+}
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2em;
+}
+.role,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  font-size: 1.5em;
+  font-variant: small-caps;
+  color: #000000;
+}
+#introduction {
+  position: relative;
+  margin: auto;
+  width: 30%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#introduction img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+#flipDiv {
+  display: flex;
+  width: 100%;
+}
+#flip {
+  position: relative;
+  bottom: 0px;
+  margin: auto;
+  cursor: pointer;
+}
+#flip.flip {
+  animation: flip 1s 2 alternate;
+}
+#coin.rotate {
+  animation: rotate 1s 2 linear;
+}
+#fullCast {
+  position: relative;
+  margin: auto;
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+#fullCast img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+#fullCast h2,
+#fullCast p {
+  padding: 0;
+  margin: 0;
+  line-height: 1em;
+}
+#characters {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.character {
+  flex: 1 1 auto;
+  padding: 10px;
+}
+button {
+  background-color: #555555;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  font-variant: small-caps;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+footer img {
+  display: inline;
+}
+#introduction.hidden,
+.hidden {
+  display: none;
+}
+.highlight {
+  border-radius: 25px;
+  background-color: #ffffff;
+}
+.twitter-share-button,
+.fb-share-button {
+  vertical-align: middle;
+}
+@media screen and (min-width: 768px) {
+  #introduction {
+    width: 65%;
+    max-width: 550px;
+  }
+  #fullCast {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #introduction {
+    width: 95%;
+  }
+  #fullCast {
+    width: 95%;
+  }
+}
+@keyframes flip {
+  from {
+    bottom: 0px;
+  }
+  to {
+    bottom: 200px;
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
